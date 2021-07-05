@@ -1,7 +1,9 @@
+#include <string.h>
 #include <stdio.h>
 #include <math.h>
 #include <map>
 #include <vector>
+#include <numeric>
 #include <iostream>
 #include <algorithm>
 
