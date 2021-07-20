@@ -1,4 +1,5 @@
 .idea
+ignore
 
 # C++
 cmake-build-debug
