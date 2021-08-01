@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <map>
+#include <stack>
 #include <queue>
 #include <vector>
 #include <numeric>
