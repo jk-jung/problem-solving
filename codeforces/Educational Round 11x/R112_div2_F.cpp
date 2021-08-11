@@ -52,20 +52,19 @@ class LowestCommonAncestor {
 public:
     int n, log_n;
     vector<int> depth, *tree;
-//    vector<vector<int>> parent;
-    int parent[300005][21];
+    vector<vector<int>> parent;
 
     void init(int _n, vector<int> *_tree) {
         n = _n;
         log_n = 32 - __builtin_clz(n);
         tree = _tree;
         depth.clear(), depth.resize(n + 1);
-//        parent.clear(), parent.resize(n + 1);
-//        for (int i = 0; i <= n; i++)parent[i].resize(log_n + 1, -1);
+        parent.clear(), parent.resize(n + 1);
+        for (int i = 0; i <= n; i++)parent[i].resize(log_n + 1, -1);
 
-//        for (int i = 0; i <= n; i++) {
-//            if (parent[i][0] == -1) dfs(i, -1);
-//        }
+        for (int i = 0; i <= n; i++) {
+            if (parent[i][0] == -1) dfs(i, -1);
+        }
     }
 
     int lca(int x, int y) {
@@ -171,9 +170,6 @@ void dfs(int x, int y, int cur) {
     p[x] = y;
     in[x] = ck++;
 
-    lca.depth[x] = (y == -1 ? 0 : lca.depth[y] + 1);
-    lca.build(x, y);
-
     for (int i = 0; i < vv[x].size(); i++) {
         int z = vv[x][i];
         if (z != y) dfs(z, x, cur ^ ww[x][i]);
@@ -213,25 +209,25 @@ void solve() {
 
     for (int i = 0; i < Q; i++) {
         if (r[i] == 0) {
-            cout << "YES" << endl;
+            cout << "YES\n";
         } else {
             int x = s[i], y = e[i];
             int t = xr[x] ^ xr[y] ^ w[i];
             if (t == 0) {
-                cout << "NO" << endl;
+                cout << "NO\n";
                 continue;
             }
 
             int a = lca.lca(x, y);
             t = ftree.read(in[x]) + ftree.read(in[y]) - 2 * ftree.read(in[a]);
             if (t > 0) {
-                cout << "NO" << endl;
+                cout << "NO\n";
                 continue;
             }
 
             up(x, a);
             up(y, a);
-            cout << "YES" << endl;
+            cout << "YES\n";
         }
     }
 }
