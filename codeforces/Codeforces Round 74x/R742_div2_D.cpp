@@ -24,25 +24,8 @@ typedef vector<int> vi;
 
 int n, s;
 
-ll t11(int x) {
-    ll r = 0, b = 1;
-    while (x) {
-        r += x % 10 * b;
-        x /= 10;
-        b *= 11;
-    }
-    return r;
-}
-
-ll ss(vi &v) {
-    ll r = 0;
-    for (int i = 0; i < s; i++)r += t11(v[i]);
-    return r;
-}
-
-
-vi make(int x) {
-    int m = n - x, base = 1, need = s - x;
+vi make() {
+    int m = n, base = 1, need = s;
     vi r(s, 1), v;
 
     while (m) {
@@ -76,13 +59,8 @@ vi make(int x) {
 
 void solve() {
     cin >> n >> s;
-    vi r(s, 1);
-    r[0] = n - s + 1;
+    vi r = make();
 
-    for (int i = 0; i < s; i++) {
-        vi t = make(i);
-        if (t.size() != 0 && ss(r) < ss(t)) r = t;
-    }
     for (int i = 0; i < s; i++)cout << r[i] << " ";
     cout << '\n';
 }
