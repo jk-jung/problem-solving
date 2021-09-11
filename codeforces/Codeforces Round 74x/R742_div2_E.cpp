@@ -25,23 +25,31 @@ typedef vector<int> vi;
 
 struct Node {
     ll M;
-    int L, R, vl, vr;
-    bool ck;
+    int L, R, vl, vr, len;
 
-    Node() {
-        M = -1;
+    Node() : vl(1<<30), vr(-(1<<30)), M(0), len(0), L(0), R(0) {}
+    Node(int v) : vl(v), vr(v), L(1), R(1), M(1), len(1) {}
+
+    Node operator+(const Node &t) const {
+        Node r;
+        bool disconnected = vr > t.vl;
+        r.len = len + t.len;
+        r.vl = vl, r.vr = t.vr;
+        r.L = (L < len || disconnected) ? L : L + t.L;
+        r.R = (t.R < t.len || disconnected) ? t.R : R + t.R;
+        r.M = M + t.M + (disconnected ? 0 : (ll) R * t.L);
+        return r;
     }
 };
 
 class SegmentTree {
 public:
     vector<Node> d;
-    int max_n;
+    int max_n, size;
 
     void init(int _max_n) {
         max_n = _max_n;
-        int size = 1;
-        for (; size < max_n; size *= 2);
+        for (size = 1; size < max_n; size *= 2);
         d.resize(size * 2 + 5);
     }
 
@@ -52,70 +60,17 @@ public:
     void up(int x, int v, int k, int l, int r) {
         if (r < l || r < x || x < l) return;
         if (l == x && r == x) {
-            d[k].L = d[k].R = 1;
-            d[k].M = 0;
-            d[k].ck = true;
-            d[k].vl = d[k].vr = v;
+            d[k] = Node(v);
         } else {
             int m = (l + r) / 2;
             up(x, v, k * 2 + 1, l, m);
             up(x, v, k * 2 + 2, m + 1, r);
-            d[k] = merge(d[k * 2 + 1], d[k * 2 + 2]);
+            d[k] = d[k * 2 + 1] + d[k * 2 + 2];
         }
-    }
-
-    ll cnt(ll x) { return x * (x + 1) / 2; }
-
-    Node merge(Node &a, Node &b) {
-        if (a.M == -1)return b;
-        if (b.M == -1)return a;
-        Node r;
-        r.ck = false;
-        r.vl = a.vl;
-        r.vr = b.vr;
-
-        if (a.ck && b.ck) {
-            if (a.vr <= b.vl) {
-                r.ck = true;
-                r.L = r.R = a.L + b.R;
-                r.M = 0;
-            } else {
-                r.L = a.L;
-                r.R = b.R;
-                r.M = 0;
-            }
-        } else if (a.ck) {
-            r.R = b.R;
-            if (a.vr <= b.vl) {
-                r.L = a.L + b.L;
-                r.M = b.M;
-            } else {
-                r.L = a.L;
-                r.M = b.M + cnt(b.L);
-            }
-        } else if (b.ck) {
-            r.L = a.L;
-            if (a.vr <= b.vl) {
-                r.R = a.R + b.R;
-                r.M = a.M;
-            } else {
-                r.R = b.R;
-                r.M = a.M + cnt(a.R);
-            }
-        } else {
-            r.L = a.L;
-            r.R = b.R;
-            r.M = a.M + b.M;
-            if (a.vr <= b.vl) r.M += cnt(a.R + b.L);
-            else r.M += cnt(a.R) + cnt(b.L);
-        }
-        return r;
     }
 
     ll read(int s, int e) {
-        Node r = read(s, e, 0, 0, max_n);
-        if (r.ck) return cnt(r.L);
-        return r.M + cnt(r.L) + cnt(r.R);
+        return read(s, e, 0, 0, max_n).M;
     }
 
     Node read(int s, int e, int k, int l, int r) {
@@ -123,9 +78,7 @@ public:
         if (s <= l && r <= e) return d[k];
         else {
             int m = (l + r) / 2;
-            Node a = read(s, e, k * 2 + 1, l, m);
-            Node b = read(s, e, k * 2 + 2, m + 1, r);
-            return merge(a, b);
+            return read(s, e, k * 2 + 1, l, m) + read(s, e, k * 2 + 2, m + 1, r);
         }
     }
 } tre;
