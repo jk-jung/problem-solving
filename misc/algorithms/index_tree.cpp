@@ -11,18 +11,15 @@ public:
 
     void up(int x, int v) {
         x += size;
-        while (x) {
-            d[x] += v;
-            x >>= 1;
-        }
+        while (x) d[x] += v, x >>= 1;
     }
 
     int read(int s, int e) {
         s += size, e += size;
         int r = 0;
         while (s <= e) {
-            if ((s & 1) == 1) r += d[s], s++;
-            if ((e & 1) == 0) r += d[e], e--;
+            if ((s & 1) == 1) r += d[s++];
+            if ((e & 1) == 0) r += d[e--];
             s >>= 1, e >>= 1;
         }
         return r;
