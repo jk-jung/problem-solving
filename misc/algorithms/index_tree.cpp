@@ -3,6 +3,10 @@ public:
     int n, size;
     vector<int> d;
 
+    IndexTree(int _n) {
+        init(_n);
+    }
+
     void init(int _n) {
         n = _n;
         size = 1 << (32 - __builtin_clz(n));
@@ -23,5 +27,14 @@ public:
             s >>= 1, e >>= 1;
         }
         return r;
+    }
+
+    int kth(int k) {
+        int x = 1;
+        while (x < size) {
+            if (d[x * 2] < k) k -= d[x * 2], x = x * 2 + 1;
+            else x *= 2;
+        }
+        return x - size;
     }
 };

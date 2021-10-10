@@ -21,17 +21,14 @@ typedef vector<int> vi;
 #define S     second
 #define ab(x) (((x)<0)?-(x):(x))
 
-#define MOD 998244353
-
-
 #define MOD 1000000007
 
-class nCrModular {
+class Modular {
 public:
     ll mod;
     vector<ll> fac, facInv;
 
-    nCrModular(int n, ll _mod) {
+    Modular(int n, ll _mod) {
         mod = _mod;
         fac.resize(n + 1), facInv.resize(n + 1);
 
@@ -51,9 +48,13 @@ public:
 
     ll inv(ll x) { return pow(x, mod - 2); }
 
-    ll nCr(ll n, ll r) {
-        if (n < r || n < 0 || r < 0) return 0;
-        if (r == 0) return 1;
-        return fac[n] * facInv[r] % mod * facInv[n - r] % mod;
+    ll nCk(ll n, ll k) {
+        if (n < k || n < 0 || k < 0) return 0;
+        if (k == 0) return 1;
+        return fac[n] * facInv[k] % mod * facInv[n - k] % mod;
     }
-} ncr(200000, MOD);
+
+    ll nHk(ll n, ll k) {
+        return nCk(n + k - 1, k);
+    }
+} modular(200000, MOD);
