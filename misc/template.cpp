@@ -4,6 +4,7 @@
 #include <cassert>
 #include <set>
 #include <map>
+#include <array>
 #include <stack>
 #include <queue>
 #include <vector>
