@@ -1,3 +1,5 @@
+// you can solve it by Union and Find
+
 #include <string.h>
 #include <stdio.h>
 #include <math.h>
