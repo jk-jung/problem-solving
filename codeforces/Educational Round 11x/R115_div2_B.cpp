@@ -39,9 +39,7 @@ void solve() {
                 else if (v[i][y])b++;
             }
 
-            while (c && a < m) a++, c--;
-            while (c && b < m) b++, c--;
-            if(a == m && b == m) {
+            if(a + c >= m && b + c >= m && a + b + c == n) {
                 cout <<"YES\n";
                 return;
             }
