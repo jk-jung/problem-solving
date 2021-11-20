@@ -1,0 +1,1 @@
+CutTheWire(global[theWire])
