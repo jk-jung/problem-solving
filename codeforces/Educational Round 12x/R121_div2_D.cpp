@@ -24,35 +24,35 @@ typedef vector<int> vi;
 #define S     second
 #define ab(x) (((x)<0)?-(x):(x))
 
+
 void solve() {
     int n;
     cin >> n;
-    vector<pi> v(n), st;
-    for (auto &x: v)cin >> x.F;
-    for (auto &x: v)cin >> x.S;
-    for (auto &x: v) {
-        st.pb(pi(x.F - x.S + 1, -1));
-        st.pb(pi(x.F, 1));
-    }
+    vi s(n + 1);
+    for (int i = 0, x; i < n; i++) cin >> x, s[x]++;
+    for (int i = 1; i <= n; i++)s[i] += s[i - 1];
 
-    sort(st.begin(), st.end());
+    int r = 1 << 30;
+    for (int k1 = 0; k1 < 20; k1++) {
+        for (int k2 = 0; k2 < 20; k2++) {
+            int s1 = 1 << k1;
+            int s2 = 1 << k2;
 
-    ll r = 0;
-    int c = 0, from = st[0].F;
-    for (int i = 0; i < st.size();) {
-        int x = st[i].F;
-        int before = c;
-        while (st[i].F == x && st[i].S == -1)c--, i++;
+            int idx = lower_bound(s.begin(), s.end(), s1) - s.begin();
+            while (s[idx] > s1) idx--;
 
-        if(before == 0 && c < 0) from = x;
-        while (st[i].F == x && st[i].S == 1)c++, i++;
+            int idx2 = lower_bound(s.begin() + idx, s.end(), s2 + s[idx]) - s.begin();
+            while (s[idx2] > s2 + s[idx]) idx2--;
 
-        if (c == 0) {
-            ll m = x - from + 1;
-            r += m * (m + 1) / 2;
+            int remain = s[n] - s[idx2], s3;
+            for (s3 = 1; s3 < remain; s3 *= 2);
+            int t = (s1 - s[idx]) + (s2 - s[idx2] + s[idx]) + (s3 - remain);
+            r = min(r, t);
         }
     }
+
     cout << r << endl;
+
 }
 
 int main() {
