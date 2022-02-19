@@ -1,0 +1,1 @@
+findFirstNames = (v, n) -> (x.firstName for x in v when x.lastName.length == n)
