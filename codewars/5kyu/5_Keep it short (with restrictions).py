@@ -1,0 +1,1 @@
+short=lambda x: {k:sum(1 for y in x if k in y) for k in set.union(*x)}
