@@ -1,3 +1,19 @@
+/*
+// A better reference
+
+int pp = -inf, pn = -inf, np = -inf, nn = -inf;
+for (int i = n * n - 1; i >= 0; i--) {
+    auto [x, y] = pos[i];
+    if (pp > x + y + k || pn > x - y + k || np > -x + y + k || nn > -x - y + k) {
+        continue;
+    }
+    pp = std::max(pp, x + y);
+    pn = std::max(pn, x - y);
+    np = std::max(np, -x + y);
+    nn = std::max(nn, -x - y);
+}
+ */
+
 #include <string.h>
 #include <stdio.h>
 #include <math.h>
