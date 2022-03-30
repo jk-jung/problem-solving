@@ -8,6 +8,7 @@ public:
     }
 
     void init(int _n) {
+        if (_n <= 0)return;
         n = _n;
         size = 1 << (32 - __builtin_clz(n));
         d.resize(size * 2 + 5);
