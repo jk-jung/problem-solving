@@ -25,7 +25,16 @@ typedef vector<int> vi;
 #define ab(x) (((x)<0)?-(x):(x))
 
 void solve() {
-
+    int n;
+    int r = 0;
+    cin >> n;
+    vi v(n);
+    for (int &x: v)cin >> x;
+    for (int i = n - 1; i >= 0; i--) {
+        if(i + v[i] < n)v[i] += v[i + v[i]];
+        r = max(r, v[i]);
+    }
+    cout << r << endl;
 }
 
 int main() {

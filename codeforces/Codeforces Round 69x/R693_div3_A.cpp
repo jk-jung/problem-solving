@@ -25,7 +25,14 @@ typedef vector<int> vi;
 #define ab(x) (((x)<0)?-(x):(x))
 
 void solve() {
-
+    int n, m, k;
+    cin >> n >> m >> k;
+    int a = n;
+    int b = m;
+    while (a % 2 == 0)a /= 2;
+    while (b % 2 == 0)b /= 2;
+    int r = (n / a) * (m / b);
+    cout << (r >= k ? "YES\n" : "NO\n");
 }
 
 int main() {
