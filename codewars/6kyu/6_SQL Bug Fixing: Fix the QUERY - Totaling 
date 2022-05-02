@@ -1,0 +1,8 @@
+SELECT
+  to_date(to_char(s.transaction_date, 'YYYY-MM-DD'), 'YYYY-MM-DD') as day,
+  d.name department,
+  COUNT(s.id) sale_count
+  FROM department d
+    JOIN sale s on d.id = s.department_id
+  group by day, d.name
+  order by day asc
