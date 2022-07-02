@@ -3,6 +3,7 @@ ignore
 
 # C++
 cmake-build-debug
+CMakeLists.txt
 
 # python
 venv
