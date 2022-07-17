@@ -37,3 +37,5 @@ add_executable(Global_Round_06_B "codeforces/Events/Global Round/Global_Round_06
 add_executable(R079_div2_D "codeforces/Educational Round 07x/R079_div2_D.cpp")
 add_executable(Global_Round_06_C "codeforces/Events/Global Round/Global_Round_06_C.cpp")
 add_executable(Global_Round_06_D "codeforces/Events/Global Round/Global_Round_06_D.cpp")
+add_executable(R609_div2_C "codeforces/Codeforces Round 60x/R609_div2_C.cpp")
+add_executable(R609_div2_B "codeforces/Codeforces Round 60x/R609_div2_B.cpp")
