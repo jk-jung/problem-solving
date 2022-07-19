@@ -40,3 +40,6 @@ add_executable(Global_Round_06_D "codeforces/Events/Global Round/Global_Round_06
 add_executable(R609_div2_C "codeforces/Codeforces Round 60x/R609_div2_C.cpp")
 add_executable(R609_div2_B "codeforces/Codeforces Round 60x/R609_div2_B.cpp")
 add_executable(Good_Bye_2019_C codeforces/Events/etc/Good_Bye_2019_C.cpp)
+add_executable(R809_div2_C "codeforces/Codeforces Round 80x/R809_div2_C.cpp")
+add_executable(R809_div2_B "codeforces/Codeforces Round 80x/R809_div2_B.cpp")
+add_executable(R809_div2_A "codeforces/Codeforces Round 80x/R809_div2_A.cpp")
