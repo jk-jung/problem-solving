@@ -33,6 +33,15 @@ public:
         return parent[x][0];
     }
 
+    int up_to(int x, int dep) {
+        for (int i = log_n; i >= 0; i--) {
+            if (depth[x] - dep >= (1 << i)) {
+                x = parent[x][i];
+            }
+        }
+        return x;
+    }
+
     void dfs(int x, int y) {
         depth[x] = (y == -1 ? 0 : depth[y] + 1);
         build(x, y);
