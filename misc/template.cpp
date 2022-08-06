@@ -1,6 +1,6 @@
-#include <string.h>
-#include <stdio.h>
-#include <math.h>
+#include <cstring>
+#include <cstdio>
+#include <cmath>
 #include <cassert>
 #include <set>
 #include <map>
@@ -30,8 +30,8 @@ void solve() {
 
 int main() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
     int test_case;
     cin >> test_case;
