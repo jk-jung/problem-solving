@@ -15,3 +15,6 @@ add_executable(R623_div2_A "codeforces/Codeforces Round 62x/R623_div2_A.cpp")
 add_executable(R625_div2_C "codeforces/Codeforces Round 62x/R625_div2_C.cpp")
 add_executable(R625_div2_B "codeforces/Codeforces Round 62x/R625_div2_B.cpp")
 add_executable(R625_div2_A "codeforces/Codeforces Round 62x/R625_div2_A.cpp")
+add_executable(OzonC "codeforces/Events/Ozon Tech Challenge 2020/Ozon Tech Challenge 2020_div1_C.cpp")
+
+add_executable(OzonB "codeforces/Events/Ozon Tech Challenge 2020/Ozon Tech Challenge 2020_div1_B.cpp")
