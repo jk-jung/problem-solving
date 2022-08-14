@@ -12,6 +12,7 @@ public:
     int find(int x) { return p[x] != x ? p[x] = find(p[x]) : x; }
 
     void unite(int x, int y) {
+        if (is_same_set(x, y)) return;
         x = find(x), y = find(y);
         if (size[x] > size[y]) swap(x, y);
         p[x] = p[y], size[y] += size[x];
