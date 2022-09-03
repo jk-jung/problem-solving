@@ -53,3 +53,6 @@ add_executable(Global_Round_07_A "codeforces/Events/Global Round/Global_Round_07
 add_executable(R647_div2_C "codeforces/Codeforces Round 64x/R647_div2_C.cpp")
 add_executable(R647_div2_B "codeforces/Codeforces Round 64x/R647_div2_B.cpp")
 add_executable(R647_div2_A "codeforces/Codeforces Round 64x/R647_div2_A.cpp")
+add_executable(R817_div4_F "codeforces/Codeforces Round 81x/R817_div4_F.cpp")
+add_executable(R817_div4_E "codeforces/Codeforces Round 81x/R817_div4_E.cpp")
+add_executable(R817_div4_D "codeforces/Codeforces Round 81x/R817_div4_D.cpp")
