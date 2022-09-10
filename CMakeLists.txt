@@ -72,3 +72,6 @@ add_executable(Global_Round_08_B "codeforces/Events/Global Round/Global_Round_08
 add_executable(Global_Round_08_C "codeforces/Events/Global Round/Global_Round_08_C.cpp")
 add_executable(R651_div2_C "codeforces/Codeforces Round 65x/R651_div2_C.cpp")
 add_executable(R651_div2_B "codeforces/Codeforces Round 65x/R651_div2_B.cpp")
+add_executable(R652_div2_C "codeforces/Codeforces Round 65x/R652_div2_C.cpp")
+add_executable(R652_div2_B "codeforces/Codeforces Round 65x/R652_div2_B.cpp")
+add_executable(R652_div2_A "codeforces/Codeforces Round 65x/R652_div2_A.cpp")
