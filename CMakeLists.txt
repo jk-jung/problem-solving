@@ -85,3 +85,6 @@ add_executable(R654_div2_C "codeforces/Codeforces Round 65x/R654_div2_C.cpp")
 add_executable(R654_div2_B "codeforces/Codeforces Round 65x/R654_div2_B.cpp")
 add_executable(R655_div2_C "codeforces/Codeforces Round 65x/R655_div2_C.cpp")
 add_executable(R655_div2_B "codeforces/Codeforces Round 65x/R655_div2_B.cpp")
+add_executable(R091_div2_C "codeforces/Educational Round 09x/R091_div2_C.cpp")
+
+add_executable(R091_div2_B "codeforces/Educational Round 09x/R091_div2_B.cpp")
