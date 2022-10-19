@@ -30,3 +30,6 @@ add_executable(Global_Round_11_A "codeforces/Global Round 01x/Global_Round_11_A.
 add_executable(R096_div2_C "codeforces/Educational Round 09x/R096_div2_C.cpp")
 add_executable(R096_div2_B "codeforces/Educational Round 09x/R096_div2_B.cpp")
 add_executable(R096_div2_A "codeforces/Educational Round 09x/R096_div2_A.cpp")
+add_executable(R828_div3_C "codeforces/Codeforces Round 82x/R828_div3_C.cpp")
+add_executable(R828_div3_B "codeforces/Codeforces Round 82x/R828_div3_B.cpp")
+add_executable(R828_div3_A "codeforces/Codeforces Round 82x/R828_div3_A.cpp")
