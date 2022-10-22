@@ -39,3 +39,6 @@ add_executable(Raif_Round_01_A "codeforces/Events/Raif Round/Raif_Round_01_A.cpp
 add_executable(R676_div2_A "codeforces/Codeforces Round 67x/R676_div2_A.cpp")
 add_executable(R676_div2_B "codeforces/Codeforces Round 67x/R676_div2_B.cpp")
 add_executable(R676_div2_C "codeforces/Codeforces Round 67x/R676_div2_C.cpp")
+add_executable(R678_div2_C "codeforces/Codeforces Round 67x/R678_div2_C.cpp")
+add_executable(R678_div2_B "codeforces/Codeforces Round 67x/R678_div2_B.cpp")
+add_executable(R678_div2_A "codeforces/Codeforces Round 67x/R678_div2_A.cpp")
