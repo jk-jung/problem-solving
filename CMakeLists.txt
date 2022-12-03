@@ -10,3 +10,6 @@ add_executable(Global_Round_21_C "codeforces/Global Round 02x/Global_Round_21_C.
 add_executable(R803_div2_C "codeforces/Codeforces Round 80x/R803_div2_C.cpp")
 add_executable(R803_div2_A "codeforces/Codeforces Round 80x/R803_div2_A.cpp")
 add_executable(R803_div2_B "codeforces/Codeforces Round 80x/R803_div2_B.cpp")
+add_executable(R804_div2_A "codeforces/Codeforces Round 80x/R804_div2_A.cpp")
+add_executable(R804_div2_B "codeforces/Codeforces Round 80x/R804_div2_B.cpp")
+add_executable(R804_div2_C "codeforces/Codeforces Round 80x/R804_div2_C.cpp")
