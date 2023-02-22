@@ -1,0 +1,89 @@
+Rank:1 kyu (2023-02-22)
+Honor:19,831
+Leaderboard Position:#208
+Honor Percentile:Top 0.041%
+Total Completed Kata:1,349
+
+Rank:1 kyu (2023-02-18)
+Honor:19,758
+Leaderboard Position:#209
+Honor Percentile:Top 0.041%
+Total Completed Kata:1,341
+
+Rank:1 kyu (2023-02-07)
+Honor:19,562
+Leaderboard Position:#212
+Honor Percentile:Top 0.042%
+Total Completed Kata:1,319
+
+Rank:1 kyu (2023-01-21)
+Honor:19,263
+Leaderboard Position:#214
+Honor Percentile:Top 0.043%
+Total Completed Kata:1,285
+
+Rank:1 kyu (2023-01-15)
+Honor:19,155
+Leaderboard Position:#215
+Honor Percentile:Top 0.043%
+Total Completed Kata:1,273
+
+Rank:1 kyu (2023-01-13)
+Honor:19,119
+Leaderboard Position:#216
+Honor Percentile:Top 0.043%
+Total Completed Kata:1,269
+
+Rank:1 kyu (2023-01-11)
+Honor:19,082
+Leaderboard Position:#218
+Honor Percentile:Top 0.044%
+Total Completed Kata:1,265z
+
+Rank:1 kyu (2023-01-06)
+Honor:18,992
+Leaderboard Position:#219
+Honor Percentile:Top 0.044%
+Total Completed Kata:1,255
+
+Rank:1 kyu (2022-12-25)
+Honor:18,752
+Leaderboard Position:#220
+Honor Percentile:Top 0.045%
+Total Completed Kata:1,231
+
+Rank:1 kyu (2022-12-18)
+Honor:18,626
+Leaderboard Position:#221
+Honor Percentile:Top 0.045%
+Total Completed Kata:1,217
+
+Rank:1 kyu (2022-12-10)
+Honor:18,481
+Leaderboard Position:#226
+Honor Percentile:Top 0.047%
+Total Completed Kata:1,201
+
+Rank:1 kyu (2022-11-17)
+Honor:18,067
+Leaderboard Position:#228
+Honor Percentile:Top 0.048%
+Total Completed Kata:1,155
+
+Rank:1 kyu (2022-11-07)
+Honor:17,886
+Leaderboard Position:#231
+Honor Percentile:Top 0.049%
+Total Completed Kata:1,135
+
+Rank:1 kyu (2022-10-15)
+Honor:17,472
+Leaderboard Position:#232
+Honor Percentile:Top 0.050%
+Total Completed Kata:1,089
+
+Rank:1 kyu (2022-10-09)
+Honor:17,363
+Leaderboard Position:#234
+Honor Percentile:Top 0.051%
+Total Completed Kata:1,077
