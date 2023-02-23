@@ -1,3 +1,9 @@
+Rank:1 dan  (2023-02-23)
+Honor:20,308
+Leaderboard Position:#203
+Honor Percentile:Top 0.040%
+Total Completed Kata:1,351
+
 Rank:1 kyu (2023-02-22)
 Honor:19,831
 Leaderboard Position:#208
