@@ -1,0 +1,1 @@
+f=lambda a: [i * sum(map(ord,a)) % 256 for i in range(1,5)]
