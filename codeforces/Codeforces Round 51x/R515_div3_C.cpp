@@ -28,7 +28,6 @@ void solve() {
     int n;
     cin >> n;
     int s = 1, e = 0;
-    s = e = 0;
     map<int, int> ck;
     while (n--) {
         char x;

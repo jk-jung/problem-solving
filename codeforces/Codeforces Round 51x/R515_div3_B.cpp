@@ -32,8 +32,8 @@ int go(int idx) {
     if (idx == n - 1)return 0;
     int &r = d[idx + 1];
     if (r != -1) return r;
-    r = 1 << 30;
-    int m = k;
+    r = 1 << 20;
+    int m = min(n, k);
     if (idx != -1) m = min(n, idx + k + k);
     for (int i = idx + 1; i < m; i++) {
         if (i == n - 1 && i < idx + k && idx != -1)r = 0;
