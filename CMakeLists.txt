@@ -4,3 +4,6 @@ project(steady_seller)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(R506_div3_B "codeforces/Codeforces Round 50x/R506_div3_B.cpp")
+add_executable(R868_div2_A "codeforces/Codeforces Round 86x/R868_div2_A.cpp")
+add_executable(R868_div2_B "codeforces/Codeforces Round 86x/R868_div2_B.cpp")
+add_executable(R868_div2_C "codeforces/Codeforces Round 86x/R868_div2_C.cpp")
