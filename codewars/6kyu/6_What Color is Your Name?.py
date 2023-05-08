@@ -1,9 +1,9 @@
-from collections import Counter
-from math import comb
-def proc_arr(s):
-    c = Counter(s)
-    r, n = 1, len(s)
-    for k, v in c.items():
-        r *= comb(n, v)
-        n -= v
-    return [r, int(''.join(sorted(s))), int(''.join(reversed(sorted(s))))]
+def string_color(s):
+    if len(s) <= 1: return
+    a = sum(map(ord, s))
+    b = 1
+    c = abs(a - ord(s[0]) * 2)
+    for x in s: b *= ord(x)
+
+    def h(x): return ('00' + hex(x % 256)[2:])[-2:].upper()
+    return h(a) + h(b) + h(c)
