@@ -1,8 +1,14 @@
+Rank:1 dan (2023-05-18)
+Honor:21,805
+Leaderboard Position:#187
+Honor Percentile:Top 0.035%
+Total Completed Kata:1,520
+
 Rank:1 dan (2023-05-16)
 Honor:21,769
 Leaderboard Position:#188
 Honor Percentile:Top 0.035%
-Total Completed Kata:1,51
+Total Completed Kata:1,516
 
 Rank:1 dan (2023-05-08)
 Honor:21,631
