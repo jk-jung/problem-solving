@@ -1,0 +1,1 @@
+remove_duplicate=lambda v:[y[1]for y in sorted({str(x):x for x in v}.items())]
