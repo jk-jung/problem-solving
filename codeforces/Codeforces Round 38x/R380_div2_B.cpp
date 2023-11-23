@@ -1,0 +1,68 @@
+#include <cstring>
+#include <cstdio>
+#include <cmath>
+#include <cassert>
+#include <set>
+#include <map>
+#include <array>
+#include <stack>
+#include <queue>
+#include <vector>
+#include <numeric>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+typedef long long ll;
+typedef pair<int, int> pi;
+typedef vector<int> vi;
+
+#define mp    make_pair
+#define pb    push_back
+#define F     first
+#define S     second
+#define ab(x) (((x)<0)?-(x):(x))
+
+int a[1005][1005];
+
+void solve() {
+    int n, m;
+    cin >> n >> m;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> a[i][j];
+        }
+    }
+
+    int r = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0, flag = 0; j < m; j++) {
+            if (a[i][j]) flag = 1;
+            else if (flag)r++;
+        }
+        for (int j = m - 1, flag = 0; j >= 0; j--) {
+            if (a[i][j]) flag = 1;
+            else if (flag)r++;
+        }
+    }
+    for (int j = 0; j < m; j++) {
+        for (int i = 0, flag = 0; i < n; i++) {
+            if (a[i][j]) flag = 1;
+            else if (flag)r++;
+        }
+        for (int i = n - 1, flag = 0; i >= 0; i--) {
+            if (a[i][j]) flag = 1;
+            else if (flag)r++;
+        }
+    }
+    cout << r << endl;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    solve();
+}
