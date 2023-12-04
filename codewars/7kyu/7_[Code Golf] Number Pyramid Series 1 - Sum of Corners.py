@@ -1,0 +1,1 @@
+sum_corners= lambda x:x**2+2*(x>1)
