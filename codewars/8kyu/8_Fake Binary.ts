@@ -1,0 +1,1 @@
+export const fakeBin = (x:string):string => x.split('').map(x => x < '5' ? '0' : '1').join('')
