@@ -1,0 +1,1 @@
+doubleChar = s => s.split('').map(x => x + x).join('')
