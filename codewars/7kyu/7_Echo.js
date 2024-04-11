@@ -1,0 +1,1 @@
+function echoProgram() {const code = "function echoProgram() {const code = CODE_PLACEHOLDER; return code.replace('CODE_PLACEHOLDER', JSON.stringify(code));}"; return code.replace('CODE_PLACEHOLDER', JSON.stringify(code));}
