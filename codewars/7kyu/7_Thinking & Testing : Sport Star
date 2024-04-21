@@ -1,0 +1,9 @@
+def testit(a, s):
+    def f(x, y):
+        return {
+            ('run', '_'): '_',
+            ('run', '|'): '/',
+            ('jump', '_'): 'x',
+            ('jump', '|'): '|',
+        }[(x, y)]
+    return ''.join(f(x, y) for x, y in zip(a, s))

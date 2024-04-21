@@ -8,3 +8,6 @@ CMakeLists.txt
 # python
 venv
 */DS_Store
+
+.vscode
+.tmp
