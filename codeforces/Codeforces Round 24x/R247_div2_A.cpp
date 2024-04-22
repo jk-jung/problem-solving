@@ -24,14 +24,22 @@ typedef vector<int> vi;
 #define S second
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
-void solve() {}
+void solve() {
+	vi v(5);
+	for (int i = 1; i <= 4; i++) cin >> v[i];
+	string s;
+	cin >> s;
+	int r = 0;
+	for (char x : s) {
+		r += v[x - '0'];
+	}
+	cout << r << endl;
+}
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 
-	int test_case;
-	cin >> test_case;
-	while (test_case--) solve();
+	solve();
 }
