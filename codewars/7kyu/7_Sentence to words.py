@@ -1,0 +1,1 @@
+splitSentence = str.split
