@@ -1,0 +1,50 @@
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <cmath>
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <set>
+#include <stack>
+#include <vector>
+
+using namespace std;
+
+typedef long long ll;
+typedef pair<int, int> pi;
+typedef vector<int> vi;
+
+#define mp make_pair
+#define pb push_back
+#define F first
+#define S second
+#define ab(x) (((x) < 0) ? -(x) : (x))
+
+void solve() {
+    string s, r;
+    cin >> s;
+    s += "WUB";
+    while (s.size() >= 3) {
+        if (s[0] == 'W' && s[1] == 'U' && s[2] == 'B') {
+            s = s.substr(3);
+            if (r.size() > 0 && r.back() != ' ')r += " ";
+        } else {
+            r += s[0];
+            s = s.substr(1);
+        }
+    }
+    cout << r << endl;
+
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    solve();
+}
