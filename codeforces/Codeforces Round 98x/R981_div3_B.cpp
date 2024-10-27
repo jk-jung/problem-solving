@@ -43,7 +43,7 @@ void solve() {
                 m = min(m, a[y][x]);
                 b[y][x] = 1;
             }
-            if (m < 0)r -= m;
+            if (m < 0)r -= m=;
         }
     }
     cout << r << endl;
