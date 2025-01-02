@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(steady_seller)
 
 set(CMAKE_CXX_STANDARD 17)
-add_executable(a "codeforces/Codeforces Round 08x/R086_div2_B.cpp")
+add_executable(a "codeforces/Codeforces Round 07x/R076_div2_A.cpp")
 add_executable(b "codeforces/Codeforces Round 19x/R191_div2_B.cpp")
 add_executable(c "codeforces/Codeforces Round 99x/R993_div4_E.cpp")
 
