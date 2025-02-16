@@ -1,0 +1,1 @@
+last_day=lambda y,m:(28+((y%4==0and y%100!=0) or y%400==0))if m==2else 31-(m in[4,6,9,11])
