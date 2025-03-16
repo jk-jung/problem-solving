@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(a "codeforces/Codeforces Round 05x/R052_div2_D.cpp")
 add_executable(b "codeforces/Codeforces Round 19x/R191_div2_B.cpp")
-add_executable(c "codeforces/Codeforces Round 100x/R1003_div4_E.cpp")
+add_executable(c "codeforces/Codeforces Round 100x/R1009_div3_C.cpp")
 
 add_executable(aa "codeforces/Educational Round 16x/R165_div2_A.cpp")
 add_executable(bb "codeforces/Educational Round 16x/R165_div2_B.cpp")
