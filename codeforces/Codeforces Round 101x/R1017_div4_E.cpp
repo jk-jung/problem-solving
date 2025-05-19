@@ -37,6 +37,20 @@ void solve() {
         }
     }
 
+    ll rr = 0;
+    for (ll x: v) {
+        ll r = 0;
+
+        for (int i = 0; i < 50; i++) {
+            if (x >> i & 1) {
+                r += (1ll << i) * (n - cnt[i]);
+            } else {
+                r += (1ll << i) * cnt[i];
+            }
+        }
+        rr = max(rr, r);
+    }
+    cout << rr << endl;
 
 }
 
