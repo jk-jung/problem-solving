@@ -3,7 +3,7 @@ project(steady_seller)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(a "codeforces/Codeforces Round 02x/R021_div2_C.cpp")
+add_executable(a "codeforces/Codeforces Round 02x/R021_div2_D.cpp")
 add_executable(b "codeforces/Codeforces Round 19x/R191_div2_B.cpp")
 add_executable(c "codeforces/Codeforces Round 103x/R1032_div3_C.cpp")
 
