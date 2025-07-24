@@ -40,6 +40,8 @@ void solve() {
     }
     cur = x == 0 ? cur + 1 : 0;
   }
+  if (cur == k)
+    r++;
   cout << r << endl;
 }
 
