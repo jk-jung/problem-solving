@@ -37,8 +37,9 @@ void solve() {
     if (cur == k) {
       r++;
       cur = 0;
+    } else {
+      cur = x == 0 ? cur + 1 : 0;
     }
-    cur = x == 0 ? cur + 1 : 0;
   }
   if (cur == k)
     r++;
