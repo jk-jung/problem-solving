@@ -50,8 +50,7 @@ void solve() {
   int r = min(check(v), check(t));
   if (r == 1e9)
     r = -1;
-  cout << "Case #"
-       << ": " << r << endl;
+  cout << r << endl;
 }
 
 int main() {
