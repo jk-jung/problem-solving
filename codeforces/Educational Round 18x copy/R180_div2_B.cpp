@@ -23,19 +23,35 @@ typedef vector<int> vi;
 #define F first
 #define S second
 #define ab(x) (((x) < 0) ? -(x) : (x))
-
-void solve() {
-  int a, x, y;
-  cin >> a >> x >> y;
-  if (x > y)
-    swap(x, y);
-  for (int i = x; i <= y; i++) {
-    if (ab(i - x) < ab(i - a) && ab(i - y) < ab(i - a)) {
-      cout << "YES" << endl;
-      return;
+int n;
+int check(vi &v) {
+  int r = 1e9;
+  for (int i = 0; i < n; i++) {
+    int s = v[i], e = v[i];
+    for (int j = i + 1; j < n; j++) {
+      if (s - 1 <= v[j] && v[j] <= e + 1) {
+        r = min(r, j - i - 1);
+        break;
+      }
+      s = min(s, v[j]);
+      e = max(e, v[j]);
     }
   }
-  cout << "NO" << endl;
+  return r;
+}
+
+void solve() {
+  cin >> n;
+  vi v(n), t;
+  for (int &x : v)
+    cin >> x;
+  t = v;
+  reverse(t.begin(), t.end());
+  int r = min(check(v), check(t));
+  if (r == 1e9)
+    r = -1;
+  cout << "Case #"
+       << ": " << r << endl;
 }
 
 int main() {
