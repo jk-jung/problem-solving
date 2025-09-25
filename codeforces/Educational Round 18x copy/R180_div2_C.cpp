@@ -43,8 +43,6 @@ void solve() {
       int ss = max(s + 1, j + 1);
       if (j < ss && ss < e)
         r += e - ss;
-
-      cout << "$$$$ " << i << " " << j << " " << s << " " << e << endl;
     }
   }
   cout << r << endl;
