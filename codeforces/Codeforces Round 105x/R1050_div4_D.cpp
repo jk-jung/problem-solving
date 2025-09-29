@@ -38,7 +38,7 @@ void solve() {
   }
   if (a.size() == 0)
     r = 0;
-  sort(a.begin(), a.end());
+  sort(a.rbegin(), a.rend());
   for (int s = 0, e = int(a.size()) - 1; s <= e; s++, e--) {
     r += a[s];
   }
