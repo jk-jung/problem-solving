@@ -98,8 +98,6 @@ void solve() {
       d++;
     }
   }
-
-  cout << a << " " << b << " " << c << " " << d << "\n";
 }
 
 int main() {
