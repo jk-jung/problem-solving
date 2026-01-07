@@ -26,11 +26,9 @@ typedef vector<int> vi;
 
 void solve() {
   string s, t;
-  // while (cin >> s) {
-  //   t += s;
-  //   cout << t << endl;
-  // }
-  cin >> t;
+  while (cin >> s) {
+    t += s;
+  }
   vi r, a;
   for (int i = 0; i < t.size(); i++) {
     if (t[i] != '<')
@@ -43,7 +41,6 @@ void solve() {
     } else if (t[i + 2] == 'd')
       r.back()++;
   }
-  cout << t << endl;
 
   sort(a.begin(), a.end());
   for (int x : a)
