@@ -1,3 +1,23 @@
+# Rank
+2 dan	97,225
+Completed	Score Awarded
+8 kyu                   2
+7 kyu               	3
+6 kyu	                8
+5 kyu                  21
+4 kyu                  55
+3 kyu                 149
+2 kyu	              404
+1 kyu               1,097
+
+# Honor
+Level	              Honor
+White (8kyu & 7kyu)       2
+Yellow (6kyu & 5kyu)      8
+Blue (4kyu & 3kyu)       32
+Purple (2kyu & 1kyu)    128
+---------------------------
+
 Rank:1 dan (2024-03-09)
 Honor:26,457
 Leaderboard Position:#168
