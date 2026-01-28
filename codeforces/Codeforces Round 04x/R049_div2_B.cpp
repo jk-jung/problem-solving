@@ -51,10 +51,8 @@ void solve() {
     ll e = i * 10 / 8;
 
     ll w2 = min(w, e);
-    cout << " h2: " << i << " s: " << s << " e: " << e << " w2: " << w2 << endl;
     if (w2 < s)
       continue;
-    cout << " h: " << i << " w2: " << w2 << endl;
     check(r, mp(i, w2));
   }
   for (ll i = 1; i <= w; i *= 2) {
