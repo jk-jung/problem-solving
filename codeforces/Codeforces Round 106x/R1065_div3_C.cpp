@@ -27,22 +27,40 @@ typedef vector<int> vi;
 void solve() {
   int n;
   cin >> n;
-  vi v(n);
-  for (int &x : v)
+  vi a(n), b(n), c(30);
+  for (int &x : a)
+    cin >> x;
+  for (int &x : b)
     cin >> x;
 
-  sort(v.begin(), v.end());
-
-  int r = v[0];
-  for (int x : v) {
-    if (x == v[0])
-      continue;
-    if (x < v[0] * 2 + 1) {
-      cout << r << endl;
-      return;
+  for (int i = 0; i < n; i++) {
+    for (int j = 0; j < 30; j++) {
+      if (a[i] >> j & 1)
+        c[j] ^= 1;
+      if (b[i] >> j & 1)
+        c[j] ^= 1;
     }
   }
-  cout << v[1] - v[0] << endl;
+
+  int idx = -1;
+  for (int j = 29; j >= 0; j--) {
+    if (c[j]) {
+      idx = j;
+      break;
+    }
+  }
+  if (idx == -1) {
+    cout << "Tie\n";
+    return;
+  }
+  int last = -1;
+  for (int i = 0; i < n; i++) {
+    int x = a[i] >> idx & 1;
+    int y = b[i] >> idx & 1;
+    if (x + y == 1)
+      last = i;
+  }
+  cout << (last % 2 ? "Mai" : "Ajisai") << endl;
 }
 
 int main() {
