@@ -24,29 +24,26 @@ typedef vector<int> vi;
 #define S second
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
-int s[1000055];
 void solve() {
-  int n, q;
-  cin >> n >> q;
-  vi a(n), b(n);
-  for (int &x : a)
-    cin >> x;
-  for (int &x : b)
+  int n;
+  cin >> n;
+  map<ll, ll> c;
+  vector<ll> a(n), b(n);
+  for (ll &x : a)
+    cin >> x, c[-x]++;
+  for (ll &x : b)
     cin >> x;
 
-  a.back() = max(a.back(), b.back());
-  for (int i = n - 2; i >= 0; i--) {
-    a[i] = max(a[i], max(a[i + 1], b[i]));
+  sort(a.begin(), a.end());
+
+  ll r = 0, cnt = 0, idx = 0;
+  for (auto [x, y] : c) {
+    cnt += y;
+    while (idx < n && b[idx] <= cnt)
+      cnt -= b[idx++];
+    r = max(r, idx * (-x));
   }
-  for (int i = 1; i <= n; i++) {
-    s[i] = s[i - 1] + a[i - 1];
-  }
-  while (q--) {
-    int x, y;
-    cin >> x >> y;
-    cout << s[y] - s[x - 1] << " ";
-  }
-  cout << endl;
+  cout << r << endl;
 }
 
 int main() {
