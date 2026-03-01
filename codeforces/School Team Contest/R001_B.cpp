@@ -25,12 +25,22 @@ typedef vector<int> vi;
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
 void solve() {
-  int a, b, c, d, e, f;
-  cin >> a >> b >> c >> d >> e >> f;
-  if (a == d || b == e || c == f) {
-    cout << "YES" << endl;
-  } else
-    cout << "NO" << endl;
+  int n;
+  cin >> n;
+  vi v(n);
+  for (int &x : v)
+    cin >> x;
+
+  vi r;
+  for (int i = 0; i < n; i++) {
+    if (r.size() + 1 == v[i]) {
+      r.pb(2000 + i + 1);
+    }
+  }
+  cout << r.size() << endl;
+  for (int x : r)
+    cout << x << " ";
+  cout << endl;
 }
 
 int main() {
