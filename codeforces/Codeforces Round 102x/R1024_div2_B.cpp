@@ -25,23 +25,24 @@ typedef vector<int> vi;
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
 void solve() {
-  ll a, b;
-  cin >> a >> b;
-  ll r = 0, k = 1;
-  while (a || b) {
-    int t = 0;
-    for (int i = 0; i < 3; i++) {
-      if ((a % 3 + i % 3) % 3 == b % 3) {
-        t = i;
-        break;
-      }
+  int n;
+  cin >> n;
+  vi v(n);
+  for (int &x : v)
+    cin >> x, x = abs(x);
+  int k = v[0];
+  sort(v.begin(), v.end());
+  int m = n / 2;
+
+  for (int i = 0; i < n; i++) {
+    if (v[i] == k) {
+      if (i > m) {
+        cout << "NO" << endl;
+      } else
+        cout << "YES" << endl;
+      return;
     }
-    a /= 3;
-    b /= 3;
-    r += t * k;
-    k *= 3;
   }
-  cout << r << endl;
 }
 
 int main() {
@@ -49,5 +50,8 @@ int main() {
   cin.tie(nullptr);
   cout.tie(nullptr);
 
-  solve();
+  int test_case;
+  cin >> test_case;
+  while (test_case--)
+    solve();
 }
