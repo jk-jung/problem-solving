@@ -30,7 +30,7 @@ void solve() {
   vector<char> st;
   for (char x : s) {
     if (st.empty() || st.back() != x)
-      s.pb(x);
+      st.pb(x);
     else
       st.pop_back();
   }
