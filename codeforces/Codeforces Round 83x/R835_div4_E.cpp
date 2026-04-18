@@ -27,23 +27,29 @@ typedef vector<int> vi;
 void solve() {
   int n;
   cin >> n;
-  vi v(n), t;
+  vi v(n);
   for (int &x : v)
     cin >> x;
-
-  t.pb(v[0]);
-  for (int i = 1; i < n; i++)
-    if (t.back() != v[i])
-      t.pb(v[i]);
-
-  int cnt = 0;
-  for (int i = 0; i < t.size(); i++) {
-    int l = i == 0 ? 1 << 30 : t[i - 1];
-    int r = i == t.size() - 1 ? 1 << 30 : t[i + 1];
-    if (l > t[i] && t[i] < r)
-      cnt++;
+  ll r = 0;
+  ll zero = 0, one = 0;
+  for (int i = 0, c = 0; i < n; i++) {
+    if (v[i] == 0)
+      r += c, zero++;
+    else
+      c++;
   }
-  cout << (cnt == 1 ? "YES" : "NO") << endl;
+
+  ll rr = r;
+  for (int i = 0; i < n; i++) {
+    if (v[i] == 0) { // 0 -> 1
+      zero--;
+      rr = max(rr, r + zero - one);
+    } else { // 1 -> 0
+      rr = max(rr, r + one - zero);
+      one++;
+    }
+  }
+  cout << rr << endl;
 }
 
 int main() {
