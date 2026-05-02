@@ -1,0 +1,2 @@
+minimum = min
+maximum = max
