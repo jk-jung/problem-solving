@@ -25,24 +25,36 @@ typedef vector<int> vi;
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
 void solve() {
-    ll n, r = 0;
-    cin >> n;
-    vector<ll> t(3);
-    while (t[0] < n) {
-        r++;
-        t[0] = min(n, t[1] * 2 + 1);
-        sort(t.begin(), t.end());
-    }
-    cout << r << endl;
+  int n, m;
+  cin >> n >> m;
+  int a = 0, b = 1;
+  for (int i = 0; i < n; i++) {
+    int c = a + b;
+    a = b;
+    b = c;
+  }
+
+  string r;
+  while (m--) {
+    vi v(3);
+    for (int &x : v)
+      cin >> x;
+    sort(v.begin(), v.end());
+    if (v[0] >= b && a + b <= v[2])
+      r += "1";
+    else
+      r += "0";
+  }
+  cout << r << endl;
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
 
-    int test_case;
-    cin >> test_case;
-    while (test_case--)
-        solve();
+  int test_case;
+  cin >> test_case;
+  while (test_case--)
+    solve();
 }
