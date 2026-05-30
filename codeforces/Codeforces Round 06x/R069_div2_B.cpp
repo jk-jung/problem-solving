@@ -28,8 +28,8 @@ typedef vector<int> vi;
 void solve() {
   double a, b;
   scanf("%lf:%lf", &a, &b);
-  if (a == 12)
-    a = 0;
+  if (a >= 12)
+    a -= 12;
   cout << fixed << setprecision(10) << (30 * a + b * 0.5) << " " << 6 * b;
 }
 

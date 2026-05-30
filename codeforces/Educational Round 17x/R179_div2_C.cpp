@@ -36,8 +36,8 @@ void solve() {
     int j = i;
     while (j < n && v[i] == v[j])
       j++;
+    r = min(r, v[i] * (ll)(n + i - j));
     i = j;
-    r = min(r, v[i] * (n + i - j));
   }
   cout << r << endl;
 }
