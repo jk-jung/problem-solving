@@ -38,9 +38,9 @@ void solve() {
     char op;
     int x, y;
     cin >> op >> x >> y;
-    if (op == 'c')
-      swap(a[x], a[y]);
     if (op == 'r')
+      swap(a[x], a[y]);
+    if (op == 'c')
       swap(b[x], b[y]);
     if (op == 'g')
       cout << v[a[x]][b[y]] << endl;
