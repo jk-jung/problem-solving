@@ -25,7 +25,7 @@ typedef vector<int> vi;
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
 void solve() {
-  int n, k;
+  ll n, k;
   cin >> n >> k;
 
   n = n / k;
