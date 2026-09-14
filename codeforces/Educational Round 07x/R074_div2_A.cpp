@@ -25,10 +25,10 @@ typedef vector<int> vi;
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
 void solve() {
-  int n;
-  string s;
-  cin >> n >> s;
-  cout << (s[0] != s[n - 1] ? "Yes" : "No") << endl;
+  ll a, b;
+  cin >> a >> b;
+  a -= b;
+  cout << (a == 1 ? "NO" : "YES") << endl;
 }
 
 int main() {
