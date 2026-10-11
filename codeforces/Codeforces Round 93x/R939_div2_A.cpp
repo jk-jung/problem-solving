@@ -26,15 +26,27 @@ typedef vector<int> vi;
 
 void solve() {
 
+  int m, n;
+  cin >> m >> n;
+  vi a(m);
+  for (int &x : a)
+    cin >> x;
+  sort(a.begin(), a.end());
+  while (n--) {
+    int t;
+    cin >> t;
+    cout << min(t, a[0] - 1) << " ";
+  }
+  cout << endl;
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
 
-	int test_case;
-	cin >> test_case;
-	while (test_case--)
-        solve();
+  int test_case;
+  cin >> test_case;
+  while (test_case--)
+    solve();
 }
