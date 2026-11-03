@@ -25,16 +25,18 @@ typedef vector<int> vi;
 #define ab(x) (((x) < 0) ? -(x) : (x))
 
 void solve() {
-
+  int n, a, b;
+  cin >> n >> a >> b;
+  cout << (ab(a - b) % 2 == 0 ? "YES" : "NO") << endl;
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
+  ios_base::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
 
-	int test_case;
-	cin >> test_case;
-	while (test_case--)
-        solve();
+  int test_case;
+  cin >> test_case;
+  while (test_case--)
+    solve();
 }
